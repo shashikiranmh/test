@@ -10,7 +10,7 @@ environment {
     stages {
         stage('bulid-java') {
             steps {
-                sh 'mvn clean deploy -Dmaven.test.skip=true'
+                sh 'mvn clean deploy -Dmaven.unit-test.skip=true'
             }
         }
 

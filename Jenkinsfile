@@ -13,6 +13,14 @@ environment {
                 sh 'mvn clean deploy'
             }
         }
+
+    stage("unit-test"){
+            steps{
+                echo "----------- unit test started ----------"
+                sh 'mvn surefire-report:report'
+                 echo "----------- unit test Complted ----------"
+            }
+        }
     
    stage('SonarQube analysis') {
     environment {
